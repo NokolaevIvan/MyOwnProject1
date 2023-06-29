@@ -1,0 +1,16 @@
+def getWeb3Matic():
+  w3 = Web3(Web3.HTTPProvider('https://rpc-mainnet.maticvigil.com/'))
+  w3.middleware_onion.inject(geth_poa_middleware, layer=0)
+  return w3
+
+
+def getWeb3Ftm():
+  w3 = Web3(Web3.HTTPProvider('https://rpc.ftm.tools/'))
+  w3.middleware_onion.inject(geth_poa_middleware, layer=0)
+  return w3
+
+
+def getWeb3Bsc():
+  w3 = Web3(Web3.HTTPProvider('https://bsc-dataseed.binance.org/'))
+  w3.middleware_onion.inject(geth_poa_middleware, layer=0)
+  return w3
